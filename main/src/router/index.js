@@ -32,13 +32,13 @@ const router = new VueRouter({
   routes
 })
 
-router.onError((error) => {
-  const pattern = /Loading chunk .* failed/g;
-  const isChunkLoadFailed = error.message.match(pattern);
-  const targetPath = router.history.pending.fullPath;
-  if (isChunkLoadFailed) {
-    router.replace(targetPath);
-  }
-});
+// router.onError((error) => {
+//   const pattern = /Loading chunk .* failed/g;
+//   const isChunkLoadFailed = error.message.match(pattern);
+//   const targetPath = router.history.pending.fullPath;
+//   if (isChunkLoadFailed) {
+//     router.replace(targetPath);
+//   }
+// });
 
 export default router

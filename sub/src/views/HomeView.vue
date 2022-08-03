@@ -17,10 +17,12 @@ export default {
   },
   methods: {
     back() {
-      window.history.pushState(null, '', '#/about')
+      window.microApp.getData().pushState('/about')
+
+      /* window.history.pushState(null, '', '#/about')
 
       // 主动触发一次popstate事件
-      window.dispatchEvent(new PopStateEvent('popstate', { state: null }))
+      window.dispatchEvent(new PopStateEvent('popstate', { state: null })) */
     }
   }
 }
